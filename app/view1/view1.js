@@ -9,6 +9,13 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', ['$scope', 'LoLChampionDetailsService', function($scope, LoLChampionDetailsService) {
+	$scope.championList = [];
+	LoLChampionDetailsService.getChampions().success(function(resp) {
+		$scope.version = resp.version;
+		$scope.championList = resp.data;
+	}).error(function(err) {
+		if (err) console.log(err);
 
+	});
 }]);

@@ -1,1 +1,3 @@
-<p>This is the partial for view 1.</p>
+<div class="container">
+	<img class="row row-no-padding-margin" ng-repeat="(key,value) in championList" width="120" height="120" ng-src="http://ddragon.leagueoflegends.com/cdn/{{ version }}/img/champion/{{value.image.full}}">
+</div>
