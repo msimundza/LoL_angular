@@ -29,18 +29,20 @@
     margin: 0 !important;
 }
 
-.champion-image{
-    -webkit-transition: all 0.1s ease; /* Safari and Chrome */
-    -moz-transition: all 0.1s ease; /* Firefox */
-    -ms-transition: all 0.1s ease; /* IE 9 */
-    -o-transition: all 0.1s ease; /* Opera */
+.champion-image {
+    display: inline-block;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
     transition: all 0.1s ease;
 }
 
 .champion-image:hover {
-    -webkit-transform:scale(1.1); /* Safari and Chrome */
-    -moz-transform:scale(1.1); /* Firefox */
-    -ms-transform:scale(1.1); /* IE 9 */
-    -o-transform:scale(1.1); /* Opera */
-     transform:scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
+

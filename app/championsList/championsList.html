@@ -1,0 +1,10 @@
+<div class="container">
+	<div class="champion-image"
+			ng-repeat="champion in championList | filter: nameFilter" 
+			>
+			<img width="120" height="120"
+				 ng-src="http://ddragon.leagueoflegends.com/cdn/6.18.1/img/champion/{{champion.image.full}}"
+				 ng-click="showDetails($event)">
+
+	</div>
+</div>

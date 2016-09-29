@@ -1,4 +1,4 @@
-angular.module('myApp.view1.services', []).
+angular.module('myApp.championsList.services', []).
 	factory('LoLChampionDetailsService', ['$http', function($http) {
 		var LoLChampionDetails = {};
 
