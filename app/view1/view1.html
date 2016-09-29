@@ -1,3 +1,10 @@
 <div class="container">
-	<img class="row row-no-padding-margin" ng-repeat="(key,value) in championList" width="120" height="120" ng-src="http://ddragon.leagueoflegends.com/cdn/{{ version }}/img/champion/{{value.image.full}}">
+	<div 	class="champion-image"
+				style="display: inline-block;"
+				ng-repeat="(key,value) in championList">
+				<img 	width="120" height="120"
+							ng-src="http://ddragon.leagueoflegends.com/cdn/6.18.1/img/champion/{{value.image.full}}"
+							ng-click="showDetails($event)">
+
+	</div>
 </div>

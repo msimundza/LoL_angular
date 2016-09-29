@@ -18,4 +18,18 @@ angular.module('myApp.view1', ['ngRoute'])
 		if (err) console.log(err);
 
 	});
+
+	$scope.showDetails = function (event) {
+			console.log(event);
+			var clickedChampionY = event.clientY;
+			var cont = $('.container');
+			var lastChampionInRowX = cont.offset().left + cont.width()-120;
+			var lastChampionInRow = document.elementFromPoint(lastChampionInRowX, clickedChampionY);
+			console.log(clickedChampionY);
+			console.log(lastChampionInRowX);
+			console.log(lastChampionInRow);
+
+
+
+	}
 }]);
