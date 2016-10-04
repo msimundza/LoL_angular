@@ -1,11 +1,25 @@
 /* app css stylesheet */
 body {
-    background: url("../images/league-of-legends-desktop-wallpaper.jpg") no-repeat center center fixed; 
+    background: url("../images/polygonal_bg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
 }
 
 .row-no-padding-margin {
@@ -34,4 +48,8 @@ body {
         width: 75px;
         padding: 2px;
     }
+}
+
+.lore {
+    background-color: white;
 }

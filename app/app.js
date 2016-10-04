@@ -7,7 +7,9 @@ angular.module('myApp', [
   'myApp.championsList.services',
   'myApp.champion',
   'myApp.champion.services',
-  'myApp.version'
+  'myApp.version',
+  'myApp.footer-directive',
+  'myApp.header-directive'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider
