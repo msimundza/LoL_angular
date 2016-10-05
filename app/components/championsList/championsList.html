@@ -2,9 +2,10 @@
     <input class="form-control" type="text" placeholder="Search..." ng-model="nameFilter.name" />
 </div>
 <div class="container">
-    <div class="champion-image" ng-repeat="champion in championList | filter: nameFilter">
+    <div class="champion-image" ng-repeat="champion in championList | filter: nameFilter | orderBy: 'name'">
         <a href="#/champions/{{champion.id}}">
-            <img ng-src="http://ddragon.leagueoflegends.com/cdn/6.18.1/img/champion/{{champion.image.full}}">
+            <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ version }}/img/champion/{{champion.image.full}}">
         </a>
     </div>
+    <div ng-repeat="tag in champion.tags">{{ tag }}</div>
 </div>
