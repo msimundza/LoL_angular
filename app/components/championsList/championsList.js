@@ -6,6 +6,9 @@ angular.module('myApp.championsList', ['ngRoute'])
 	LoLChampionsListService.getChampions().success(function(resp) {
 		$scope.version = resp.version;
 
+		// we can hardcode this because it won't change EVER
+		$scope.roles = ['Fighter', 'Assassin', 'Mage', 'Tank', 'Marksman', 'Support'];
+
 		// each object element pushed to array so filter search would work without extra mumbojumbo / refactor, optimize this
 		angular.forEach(resp.data, function(element) {
 		  $scope.championList.push(element);
