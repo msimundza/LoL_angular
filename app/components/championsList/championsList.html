@@ -1,6 +1,3 @@
-<div class="form-group container">
-    <input class="form-control" type="text" placeholder="Search..." ng-model="nameFilter.name" />
-</div>
 <div class="container">
     <div class="champion-image" ng-repeat="champion in championList | filter: nameFilter | orderBy: 'name'">
         <a href="#/champions/{{champion.id}}">
