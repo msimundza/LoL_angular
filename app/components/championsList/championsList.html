@@ -4,7 +4,8 @@
             <form>
                 <div class="checkbox" ng-repeat="role in roles">
                     <label>
-                        <input type="checkbox" value="{{ role }}"> {{ role }} </label>
+                        <input type="checkbox" ng-model="$index">{{ role.name }}
+                    </label>
                 </div>
             </form>
         </div>

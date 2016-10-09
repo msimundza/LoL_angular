@@ -5,9 +5,26 @@ angular.module('myApp.championsList', ['ngRoute'])
 	$scope.championList = [];
 	LoLChampionsListService.getChampions().success(function(resp) {
 		$scope.version = resp.version;
-
 		// we can hardcode this because it won't change EVER
-		$scope.roles = ['Fighter', 'Assassin', 'Mage', 'Tank', 'Marksman', 'Support'];
+  		$scope.roles = ['Fighter', 'Assassin', 'Mage', 'Tank', 'Marksman', 'Support'];
+
+  		$scope.rolesObj = {
+  			fighter: false,
+  			assassin: false,
+  			mage: false,
+  			tank: false,
+  			marksman: false,
+  			support: false,
+  		}
+
+  		// $scope.roles = [
+  		//  { name: 'Fighter', fighter: false },
+  		//  { name: 'Assassin', assassin: false },
+  		//  { name: 'Mage', mage: false },
+  		//  { name: 'Tank', tank: false },
+  		//  { name: 'Marksman', marksman: false},
+  		//  { name: 'Support', support: false }
+  		// ];
 
 		// each object element pushed to array so filter search would work without extra mumbojumbo / refactor, optimize this
 		angular.forEach(resp.data, function(element) {
@@ -17,7 +34,10 @@ angular.module('myApp.championsList', ['ngRoute'])
 		if (err) console.log(err);
 
 	});
-}]);
+}])
+.filter('rolesFilter', function() {
+	return function() {}
+});
 // calculations for dropdown under each champion icon
 // TODO: if last row isnt full, wrong resulat when calculated
 // console.log(event);
