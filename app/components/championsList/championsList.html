@@ -2,15 +2,15 @@
     <div class="row">
         <div class="col-md-3 left-sidebar">
             <form>
-                <div class="checkbox" ng-repeat="role in roles">
+                <div class="checkbox" ng-repeat="(key, value) in rolesObj">
                     <label>
-                        <input type="checkbox" ng-model="$index">{{ role.name }}
+                        <input type="checkbox" ng-model="rolesObj[key]">{{ key }}
                     </label>
                 </div>
             </form>
         </div>
         <div class="col-md-9">
-            <div class="champion-image" ng-repeat="champion in championList | filter: nameFilter | orderBy: 'name'">
+            <div class="champion-image" ng-repeat="champion in championList | filter: nameFilter | rolesFilter: rolesObj | orderBy: 'name'">
                 <a href="#/champions/{{champion.id}}">
                     <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ version }}/img/champion/{{champion.image.full}}">
                 </a>
