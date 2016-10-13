@@ -2,18 +2,20 @@
 
 angular.module('myApp.championsList', ['ngRoute'])
 .controller('championsListCtrl', ['$scope', 'LoLChampionsListService', function($scope, LoLChampionsListService) {
+	$scope.loading = true;
 	$scope.championList = [];
+
+	$scope.rolesObj = {
+		Fighter: false,
+		Assassin: false,
+		Mage: false,
+		Tank: false,
+		Marksman: false,
+		Support: false,
+	}
+
 	LoLChampionsListService.getChampions().success(function(resp) {
 		$scope.version = resp.version;
-
-		$scope.rolesObj = {
-			Fighter: false,
-			Assassin: false,
-			Mage: false,
-			Tank: false,
-			Marksman: false,
-			Support: false,
-		}
 
 		// each object element pushed to array so filter search would work without extra mumbojumbo / refactor, optimize this
 		angular.forEach(resp.data, function(element) {
@@ -21,7 +23,8 @@ angular.module('myApp.championsList', ['ngRoute'])
 		});
 	}).error(function(err) {
 		if (err) console.log(err);
-
+	}).finally(function() {
+		$scope.loading = false;
 	});
 }])
 .filter('rolesFilter', function() {

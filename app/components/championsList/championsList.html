@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container champion-list-container">
     <div class="row">
         <div class="col-md-3 left-sidebar">
             <form>
@@ -9,7 +9,8 @@
                 </div>
             </form>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-9 champion-list-wrapper">
+            <i class="fa fa-spinner fa-spin" aria-hidden="true" ng-show="loading"></i>
             <div class="champion-image" ng-repeat="champion in championList | filter: nameFilter | rolesFilter: rolesObj | orderBy: 'name'">
                 <a href="#/champions/{{champion.id}}">
                     <img ng-src="http://ddragon.leagueoflegends.com/cdn/{{ version }}/img/champion/{{champion.image.full}}">
