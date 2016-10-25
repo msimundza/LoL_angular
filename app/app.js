@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('myApp', [
+  .module('myApp', [ 'ui.bootstrap',
     'ngRoute',
     'myApp.championsList',
     'myApp.championsList.services',

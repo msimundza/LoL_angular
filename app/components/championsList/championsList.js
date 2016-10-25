@@ -42,24 +42,24 @@ angular.module('myApp.championsList', ['ngRoute'])
 
 		angular.forEach(champions, function(champion){
 			var count = 0,
-					amount = checked.length,
-					tag, check;
-				for(var i = 0; i < champion.tags.length; i++) {
-					tag = champion.tags[i];
+				amount = checked.length,
+				tag, check;
+			for(var i = 0; i < champion.tags.length; i++) {
+				tag = champion.tags[i];
 
-					for (var j = 0; j < checked.length; j++) {
-						check = checked[j];
+				for (var j = 0; j < checked.length; j++) {
+					check = checked[j];
 
-						if (tag == check) {
-							count++;
-							break;
-						}
+					if (tag == check) {
+						count++;
+						break;
 					}
 				}
+			}
 
-				if (count === amount) {
-					filtered.push(champion);
-				}
+			if (count === amount) {
+				filtered.push(champion);
+			}
 		});
 
 		return filtered;
