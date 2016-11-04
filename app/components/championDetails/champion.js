@@ -4,6 +4,11 @@ angular.module('myApp.champion', ['ngRoute'])
 .controller('championCtrl', ['$scope', '$sce', '$routeParams', 'LoLChampionDetailsService', function($scope, $sce, $routeParams, LoLChampionDetailsService) {
 	$scope.loading = true;
 	$scope.id = $routeParams.id;
+	$scope.imageNum = 0;
+
+	$scope.setImage = function (num) {
+		$scope.imageNum = num;
+	}
 
 	LoLChampionDetailsService.getChampionDetails($scope.id).success(function(resp) {
 		$scope.championDetails = resp;

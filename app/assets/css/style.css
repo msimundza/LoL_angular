@@ -28,7 +28,7 @@ html {
 .champion-lore {
   background-color: white;
   position: relative;
-  padding: 0 15px 15px 15px; }
+  padding: 0 15px 15px; }
 
 .left-sidebar {
   margin-top: 3px;
@@ -48,6 +48,12 @@ html {
 
 .navbar-static-top .navbar-form {
   padding-top: 5px; }
+
+.skin-preview {
+  padding-top: 20px; }
+  .skin-preview .skin-thumbnails .skin-thumbnail {
+    cursor: pointer;
+    padding: 0 0 1px 1px; }
 
 .champion-list-container .champion-list-wrapper {
   position: relative; }
