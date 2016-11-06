@@ -1,5 +1,6 @@
-<div class="container champion-lore">
-    <div class="row"><i class="fa fa-spinner fa-spin" aria-hidden="true" ng-show="loading"></i>
+<div class="container champion-lore-container">
+    <i class="fa fa-spinner fa-spin" aria-hidden="true" ng-show="loading"></i>
+    <div class="row champion-lore" ng-hide="loading">
         <div class="col-md-6">
             <h1>{{ championDetails.name }}</h1>
             <h5>{{ championDetails.title }}</h5>
@@ -10,12 +11,11 @@
                 <div class="col-md-4 skin-thumbnails">
                     <div class="col-md-6 skin-thumbnail" ng-repeat="skin in championDetails.skins">
                         <img ng-click="setImage(skin.num)"
-                            ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{championDetails.key}}_{{skin.num}}.jpg"
-                            style="width:100%">
+                            ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{championDetails.key}}_{{skin.num}}.jpg">
                     </div>
                 </div>
                 <div class="col-md-8 skin-image">
-                    <img class="tete" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{championDetails.key}}_{{imageNum}}.jpg">
+                    <img ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{championDetails.key}}_{{imageNum}}.jpg">
                 </div>
             </div>
         </div>

@@ -25,10 +25,11 @@ html {
   padding: 0 !important;
   margin: 0 !important; }
 
-.champion-lore {
+.champion-lore-container {
   background-color: white;
-  position: relative;
-  padding: 0 15px 15px; }
+  position: relative; }
+  .champion-lore-container .champion-lore {
+    padding: 0 15px 15px; }
 
 .left-sidebar {
   margin-top: 3px;
@@ -54,6 +55,8 @@ html {
   .skin-preview .skin-thumbnails .skin-thumbnail {
     cursor: pointer;
     padding: 0 0 1px 1px; }
+    .skin-preview .skin-thumbnails .skin-thumbnail img {
+      width: 100%; }
 
 .champion-list-container .champion-list-wrapper {
   position: relative; }
@@ -75,7 +78,7 @@ html {
       width: 75px;
       padding: 2px; }
 
-.spinner-style i, .champion-lore i, .champion-list-container .champion-list-wrapper i {
+.spinner-style i, .champion-lore-container i, .champion-list-container .champion-list-wrapper i {
   position: absolute;
   left: 50%;
   top: 20px;
