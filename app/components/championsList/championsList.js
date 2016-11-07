@@ -12,7 +12,7 @@ angular.module('myApp.championsList', ['ngRoute'])
 		Tank: false,
 		Marksman: false,
 		Support: false,
-	}
+	};
 
 	LoLChampionsListService.getChampions().success(function(resp) {
 		$scope.version = resp.version;

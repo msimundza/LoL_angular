@@ -34,6 +34,29 @@ html {
 .left-sidebar {
   margin-top: 3px;
   background: #e7e7e7; }
+  .left-sidebar .search-container {
+    position: relative; }
+    .left-sidebar .search-container input.form-control {
+      margin-top: 10px;
+      font-size: 18px;
+      box-shadow: none;
+      border: none;
+      padding: 8px 0 2px;
+      border-radius: 0;
+      background: inherit;
+      border-bottom: 1px solid #c7c7c7;
+      transition: border-bottom 0.3s ease; }
+      .left-sidebar .search-container input.form-control:focus, .left-sidebar .search-container input.form-control:hover {
+        border-bottom: 1px solid #9c9c9c; }
+    .left-sidebar .search-container i {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      font-size: 18px;
+      color: #c7c7c7;
+      transition: color 0.3s ease; }
+    .left-sidebar .search-container input.form-control:focus + i, .left-sidebar .search-container input.form-control:hover + i {
+      color: #9c9c9c; }
 
 .navbar-static-top .navbar-brand {
   height: 60px;
@@ -56,7 +79,7 @@ html {
     cursor: pointer;
     padding: 0 0 1px 1px; }
     .skin-preview .skin-thumbnails .skin-thumbnail img {
-      width: 100%; }
+      width: 99%; }
 
 .champion-list-container .champion-list-wrapper {
   position: relative; }

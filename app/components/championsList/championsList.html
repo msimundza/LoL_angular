@@ -1,6 +1,10 @@
 <div class="container champion-list-container">
     <div class="row">
         <div class="col-md-3 left-sidebar">
+            <div class="search-container">
+                <input class="form-control" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" placeholder="Search..." ng-model="nameFilter.name" />
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
             <form>
                 <div class="checkbox" ng-repeat="(key, value) in rolesObj">
                     <label>

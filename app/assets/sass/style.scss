@@ -1,5 +1,4 @@
 /* app css stylesheet */
-
 body {
     background: url("../images/polygonal_bg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -21,6 +20,7 @@ html {
     width: 100%;
     height: 60px;
     background-color: #e7e7e7;
+
     div.text-muted {
         margin: 20px 0;
     }
@@ -35,6 +35,7 @@ html {
     background-color: white;
     position: relative;
     @extend .spinner-style;
+
     .champion-lore {
         padding: 0 15px 15px;
     }
@@ -43,22 +44,58 @@ html {
 .left-sidebar {
     margin-top: 3px;
     background: #e7e7e7;
+
+    .search-container {
+        position: relative;
+
+        input.form-control {
+            margin-top: 10px;
+            font-size: 18px;
+            box-shadow: none;
+            border: none;
+            padding: 8px 0 2px;
+            border-radius: 0;
+            background: inherit;
+            border-bottom: 1px solid #c7c7c7;
+            transition: border-bottom 0.3s ease;
+            &:focus,
+            &:hover {
+                border-bottom: 1px solid #9c9c9c;
+            }
+        }
+
+        i {
+            position: absolute;
+            right: 0;
+            top: 10px;
+            font-size: 18px;
+            color: #c7c7c7;
+            transition: color 0.3s ease;
+        }
+
+        input.form-control:focus + i, input.form-control:hover + i {
+            color: #9c9c9c;
+        }
+    }
 }
 
 .navbar-static-top {
     .navbar-brand {
         height: 60px;
         padding: 0;
+
         > img {
             height: 100%;
             padding: 10px;
             width: auto;
         }
     }
+
     .nav > li > a {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+
     .navbar-form {
         padding-top: 5px;
     }
@@ -66,12 +103,14 @@ html {
 
 .skin-preview {
     padding-top: 20px;
+
     .skin-thumbnails {
         .skin-thumbnail {
             cursor: pointer;
             padding: 0 0 1px 1px;
+
             img {
-                width: 100%;
+                width: 99%;
             }
         }
     }
@@ -81,6 +120,7 @@ html {
     .champion-list-wrapper {
         position: relative;
         @extend .spinner-style;
+
         .champion-image {
             display: inline-block;
             -webkit-transition: all 0.1s ease;
@@ -88,6 +128,7 @@ html {
             -ms-transition: all 0.1s ease;
             -o-transition: all 0.1s ease;
             transition: all 0.1s ease;
+
             &:hover {
                 -webkit-transform: scale(1.1);
                 -moz-transform: scale(1.1);
@@ -95,6 +136,7 @@ html {
                 -o-transform: scale(1.1);
                 transform: scale(1.1);
             }
+
             img {
                 height: 75px;
                 width: 75px;
