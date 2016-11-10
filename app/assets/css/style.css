@@ -55,7 +55,8 @@ html {
       font-size: 18px;
       color: #c7c7c7;
       transition: color 0.3s ease; }
-    .left-sidebar .search-container input.form-control:focus + i, .left-sidebar .search-container input.form-control:hover + i {
+    .left-sidebar .search-container input.form-control:focus + i,
+    .left-sidebar .search-container input.form-control:hover + i {
       color: #9c9c9c; }
 
 .navbar-static-top .navbar-brand {
@@ -79,7 +80,11 @@ html {
     cursor: pointer;
     padding: 0 0 1px 1px; }
     .skin-preview .skin-thumbnails .skin-thumbnail img {
-      width: 99%; }
+      width: 100%; }
+  .skin-preview .skin-image img {
+    width: 100%; }
+  .skin-preview .skin-image h4 {
+    text-align: center; }
 
 .champion-list-container .champion-list-wrapper {
   position: relative; }
@@ -108,3 +113,6 @@ html {
   color: white;
   font-size: 100px;
   margin-left: -50px; }
+
+.fr {
+  float: right; }
