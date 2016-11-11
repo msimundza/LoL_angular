@@ -97,6 +97,8 @@ html {
 .skin-preview {
     padding-top: 20px;
     .skin-thumbnails {
+        display: flex;
+        flex-wrap: wrap;
         .skin-thumbnail {
             cursor: pointer;
             padding: 0 0 1px 1px;

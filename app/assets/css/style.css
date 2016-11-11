@@ -76,11 +76,14 @@ html {
 
 .skin-preview {
   padding-top: 20px; }
-  .skin-preview .skin-thumbnails .skin-thumbnail {
-    cursor: pointer;
-    padding: 0 0 1px 1px; }
-    .skin-preview .skin-thumbnails .skin-thumbnail img {
-      width: 100%; }
+  .skin-preview .skin-thumbnails {
+    display: flex;
+    flex-wrap: wrap; }
+    .skin-preview .skin-thumbnails .skin-thumbnail {
+      cursor: pointer;
+      padding: 0 0 1px 1px; }
+      .skin-preview .skin-thumbnails .skin-thumbnail img {
+        width: 100%; }
   .skin-preview .skin-image img {
     width: 100%; }
   .skin-preview .skin-image h4 {
