@@ -6,7 +6,7 @@ angular.module('myApp.champion', ['ngRoute'])
 	$scope.collapsed = true;
 	$scope.id = $routeParams.id;
 	$scope.imageNum = 0;
-	$scope.bla = '';
+	var defaultSkinName = '';
 
 	$scope.setImageAndSkinName = function (num, skinName) {
 		$scope.imageNum = num;
@@ -14,7 +14,7 @@ angular.module('myApp.champion', ['ngRoute'])
 		if (skinName != 'default') {
 			return $scope.championDetails.skinName = skinName;
 		}
-		$scope.championDetails.skinName = $scope.championDetails.defaultSkinName;
+		$scope.championDetails.skinName = defaultSkinName;
 	};
 
 	$scope.toggleLore = function (collapsed) {
@@ -26,7 +26,7 @@ angular.module('myApp.champion', ['ngRoute'])
 		$scope.championDetails.lore = $sce.trustAsHtml(resp.lore);
 		$scope.championDetails.blurb = $sce.trustAsHtml(resp.blurb);
 		$scope.championDetails.skinName = resp.name;
-		$scope.championDetails.defaultSkinName = resp.name;
+		defaultSkinName = resp.name;
 		console.log(resp);
 	}).error(function(err) {
 		if (err) console.log(err);
