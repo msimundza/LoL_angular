@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-9 champion-list-wrapper">
             <i class="fa fa-spinner fa-spin" aria-hidden="true" ng-show="loading"></i>
-            <div class="champion-image"
+            <div class="champion-image animate"
                 ng-repeat="champion in championList | filter: nameFilter | rolesFilter: rolesObj | orderBy: 'name'"
                 tooltip-placement="bottom"
                 uib-tooltip="{{champion.name}}">
